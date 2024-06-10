@@ -1,0 +1,29 @@
+---
+import {Song, songList} from '../data/Songs.ts'
+import Sidebar from '../Components/Sidebar.astro'
+import MainContainer from '../Components/MainContainer/MainContainer.astro'
+import MainLayout from '../layouts/MainLayout.astro'
+
+const levitate = songList[1];
+
+const Blurryface = songList.filter((s) => s.album === 'Blurryface');
+
+const Albuns:Array<string> = []
+
+const Artists:Array<string> = []
+
+songList.forEach((e) => Albuns.push(e.album));
+
+songList.forEach((e) => Artists.push(e.artist));
+
+function removeDup(data){
+	return data.filter((value, index) => data.indexOf(value) === index);
+}
+
+---
+<MainLayout>
+	<Sidebar />
+	<div class="MainContainer">
+		<MainContainer />
+	</div>
+</MainLayout>

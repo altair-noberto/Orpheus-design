@@ -1,8 +1,12 @@
 ---
+import { Icon } from 'astro-icon/components'
 ---
 
 <nav class="navbar">
-<div class="BackFoward"><a><</a><a>></a></div>
-<input type="text" name="search" id="search">
-<div class="user">oie</div>
+    <div class="BackFoward"><a><</a><a>></a></div>
+    <div class="search">
+        <Icon name="material-symbols:search"/>
+        <input type="text" name="search" id="search">
+    </div>
+    <div class="user">oie</div>
 </nav>
